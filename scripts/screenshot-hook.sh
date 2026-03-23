@@ -16,24 +16,30 @@ bash "$HOME/.claude/scripts/screenshot.sh" $ARGS >/dev/null 2>&1
 
 # Auto-paste @path into the input box after it becomes available.
 # Since continue:false skips Claude entirely, Stop hook won't fire — handle it here.
-TMP=$(mktemp /tmp/cc_autopaste_XXXXXX.sh)
-cat > "$TMP" << 'APEOF'
+#
+# macOS: nohup strips the Aqua GUI session so osascript can't send keystrokes.
+#        Run directly in a subshell + disown to keep the session context intact.
+# WSL2/Linux: nohup is fine, no GUI session context involved.
+if [[ "$(uname)" == "Darwin" ]]; then
+    (sleep 1.0 && osascript -e 'tell application "System Events" to keystroke "v" using {command down}' 2>/dev/null) &
+    disown
+else
+    TMP=$(mktemp /tmp/cc_autopaste_XXXXXX.sh)
+    cat > "$TMP" << 'APEOF'
 #!/usr/bin/env bash
 if grep -qi microsoft /proc/version 2>/dev/null; then
     sleep 0.4
     powershell.exe -NoProfile -NonInteractive -Command \
         "Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait('^v')" \
         2>/dev/null
-elif [[ "$(uname)" == "Darwin" ]]; then
-    sleep 1.0
-    osascript -e 'tell application "System Events" to keystroke "v" using {command down}' 2>/dev/null
 elif command -v xdotool &>/dev/null; then
     sleep 0.4
     xdotool key ctrl+v 2>/dev/null
 fi
 APEOF
-chmod +x "$TMP"
-nohup bash "$TMP" >/dev/null 2>&1 &
+    chmod +x "$TMP"
+    nohup bash "$TMP" >/dev/null 2>&1 &
+fi
 
 # Block Claude from processing this message — no response generated
 echo '{"continue": false}'
