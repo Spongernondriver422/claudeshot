@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="cloudeshot_logo.svg" alt="claudeshot logo" width="120" />
+</p>
+
 # claudeshot
 
 A Claude Code skill that lets you capture your screen and drop it straight into your next prompt — silently, with zero friction.
