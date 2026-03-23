@@ -1,0 +1,9 @@
+{
+  "name": "claudeshot",
+  "version": "0.1.0",
+  "description": "Cross-platform screenshot tool for Claude Code. Capture your screen and drop it straight into your prompt — no copy-paste required.",
+  "author": "MarcoGarofalo94",
+  "skills": [
+    "skills/cshot/SKILL.md"
+  ]
+}

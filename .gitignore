@@ -1,0 +1,9 @@
+# Local Claude Code settings (contains machine-specific paths and personal config)
+.claude/
+
+# macOS
+.DS_Store
+
+# Temp files
+*.tmp
+*.bak
