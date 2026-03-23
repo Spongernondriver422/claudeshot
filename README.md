@@ -15,6 +15,8 @@ Claude Code can read images via `@path` mentions, but getting a screenshot into 
 
 claudeshot eliminates all of that. Type `/cshot`, capture, and the `@path` is already in your next prompt waiting for you.
 
+> **macOS note**: the `@path` is copied to your clipboard automatically — press `Cmd+V` to paste it into the prompt.
+
 ## How it works
 
 1. You type `/cshot [mode]` and press Enter
