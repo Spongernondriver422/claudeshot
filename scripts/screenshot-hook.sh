@@ -19,14 +19,16 @@ bash "$HOME/.claude/scripts/screenshot.sh" $ARGS >/dev/null 2>&1
 TMP=$(mktemp /tmp/cc_autopaste_XXXXXX.sh)
 cat > "$TMP" << 'APEOF'
 #!/usr/bin/env bash
-sleep 0.4
 if grep -qi microsoft /proc/version 2>/dev/null; then
+    sleep 0.4
     powershell.exe -NoProfile -NonInteractive -Command \
         "Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait('^v')" \
         2>/dev/null
 elif [[ "$(uname)" == "Darwin" ]]; then
+    sleep 1.0
     osascript -e 'tell application "System Events" to keystroke "v" using {command down}' 2>/dev/null
 elif command -v xdotool &>/dev/null; then
+    sleep 0.4
     xdotool key ctrl+v 2>/dev/null
 fi
 APEOF
